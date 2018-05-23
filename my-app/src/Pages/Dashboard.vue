@@ -23,7 +23,7 @@
       required
     ></v-text-field>
     <v-text-field
-      v-model="addres"
+      v-model="address"
       :rules="addressRules"
       :counter="150"
       label="住所"
