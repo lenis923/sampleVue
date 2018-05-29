@@ -1,12 +1,29 @@
 <template>
   <v-container fluid>
     <p>this is setting</p>
- 
+    <v-btn large color="primary" class="mx-0" v-on:click.native="testFunction">Click me.</v-btn>
+    <button v-on:click="sampleOnClick()">Add 1</button>
   </v-container>
 </template>
 
 <script>
-  axios.get('http://127.0.0.1:57110/index.html')
+
+export default {
+  methods: {
+    testFunction: function (event) {
+      console.log('test clicked')
+    }
+  }
+}
+
+
+ function sampleOnClick() {
+  alert('click.');
+ 
+ }
+
+
+  axios.get('/index.html')
   .then(function (response) {
     console.log(response);
   })

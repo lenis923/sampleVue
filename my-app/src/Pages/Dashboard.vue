@@ -31,7 +31,6 @@
     ></v-text-field>
     <v-text-field
       v-model="street"
-      :rules="streetRules"
       :counter="150"
       label="番地"
     ></v-text-field>
