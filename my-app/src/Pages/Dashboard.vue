@@ -40,6 +40,7 @@
       label="Eメールアドレス"
       required
     ></v-text-field>
+    <v-btn large color="primary" class="mx-0" v-on:click.native="submit">登録</v-btn>
     </v-form>
   </v-container>
  
@@ -47,6 +48,11 @@
  
 <script>
   export default {
+    methods: {
+      submit: function (event) {
+        alert('submit' + this.name);
+      }
+    },
     data: () => ({
       valid: false,
       name: '',

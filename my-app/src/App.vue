@@ -30,6 +30,18 @@
               </v-list-tile-content>
             </v-list-tile>
           </router-link>
+
+          <router-link to="/layout">
+            <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>dashboard</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>Layout</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </router-link>
+
         </v-list>
       </v-navigation-drawer>
     <v-toolbar
