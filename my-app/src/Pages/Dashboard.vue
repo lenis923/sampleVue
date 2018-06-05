@@ -47,12 +47,10 @@
 </template>
  
 <script>
+  // https://qiita.com/sygnas/items/7eac9491b37a1bcba0cb
+
+
   export default {
-    methods: {
-      submit: function (event) {
-        alert('submit' + this.name);
-      }
-    },
     data: () => ({
       valid: false,
       name: '',
@@ -70,7 +68,24 @@
         v => !!v || 'Eメールアドレスを入力してください',
         v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Eメールアドレスの形式が異なります'
       ]
-    })
+    }),
+    methods: {
+      submit: function (event) {
+      
+        axios.get('/src/sample/user.js')
+        .then(res => {
+          console.log(res);
+          this.address = res.data.name;
+        })
+        .catch(error => console.log(error));
+
+
+      }
+    }
+
+    
+    
+    
   }
 </script>
  
